@@ -1,2 +1,2 @@
-# Submission-Katalog-Restoran-Kedua
+# Submission-Katalog-Restoran-PWA
 Submission: Katalog Restoran 2
