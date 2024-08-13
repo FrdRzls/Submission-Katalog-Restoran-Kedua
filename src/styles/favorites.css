@@ -1,0 +1,381 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #f7f7f7;
+  line-height: 1.5;
+}
+
+header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  box-shadow: 0 4px 8px rgba(144, 207, 236, 0.1);
+  align-items: center;
+  background-image: radial-gradient(circle at 46.65% 40.79%, #3c5b83 0, #30394a 25%, #1b1a16 50%, #000000 75%, #000000 100%);
+  color: #fff;
+  padding: 15px;
+}
+
+header h1 {
+  margin: 0;
+  margin-left: 10px;
+  font-size: 22px;
+}
+
+header img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+#drawer {
+  justify-self: end;
+}
+
+#drawer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+}
+
+#drawer ul li {
+  margin-right: 10px;
+}
+
+#drawer ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px;
+  display: inline-block;
+}
+
+#drawer ul li a:hover {
+  color: #c8da99;
+}
+
+.toggle-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+main {
+  padding: 20px;
+  padding-bottom: 80px;
+}
+
+.content h1 {
+  text-align: center;
+  font-weight: bold;
+  color: #2C4E80;
+}
+
+.content p {
+  padding: 10px;
+  text-align: center;
+  color: #30394a;
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.content h1:hover {
+  color: #626891;
+}
+
+.restaurant-list {
+  display: grid;
+  padding-top: 20px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 30px;
+}
+
+.restaurant-card {
+  background-color: #fff;
+  margin: 0 5px;
+  position: relative;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 5px 10px #2C4E80;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.restaurant-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px #2C4E80;
+}
+
+.restaurant-card h2 {
+  position: absolute;
+  background-color: rgba(81, 87, 99, 0.8);
+  top: 60px;
+  left: 40px;
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  color: #f6e7d8;
+}
+
+.restaurant-card h3 {
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-align: justify;
+  color: #000000;
+}
+
+.restaurant-card h4 {
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-align: justify;
+  color: #2C4E80;
+}
+
+.restaurant-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.restaurant-card h4 span {
+  color: gold;
+}
+
+.restaurantName {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.restaurant-card h3 span {
+  color: gold;
+}
+
+.restaurant-card p {
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  text-align: justify;
+  color: #2C4E80;
+  padding-left: 5px;
+
+}
+.restaurant-card .detail-link,
+.restaurant-card button {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px; 
+}
+
+.restaurant-card .detail-link {
+  position: absolute;
+  bottom: 8px;
+  right: 50px;
+  background: none;
+  color: #2C4E80;
+  border: none;
+  cursor: pointer;
+  font-size: 1.9rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.restaurant-card .detail-link::after {
+  content: "View Detail";
+  position: absolute;
+  top: -3cap;
+  left: 50%;
+  transform: translateX(-60%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.restaurant-card .detail-link:hover::after {
+  opacity: 1;
+}
+
+.restaurant-card .detail-link:hover {
+  color: #626891;
+  transform: scale(1.05);
+}
+
+.restaurant-card button {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: none;
+  color: #2C4E80;
+  border: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.restaurant-card button::after {
+  content: "Remove from favorites";
+  position: absolute;
+  top: -3cap;
+  left: 50%;
+  transform: translateX(-85%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.restaurant-card button:hover::after {
+  opacity: 5;
+}
+
+.restaurant-card button:hover {
+  color: #626891;
+  transform: scale(1.05);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: radial-gradient(circle at 46.65% 40.79%, #3c5b83 0, #30394a 25%, #1b1a16 50%, #000000 75%, #000000 100%);
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  border: 2px solid #626891;
+  border-radius: 5px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999em;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  left: auto;
+  top: auto;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  padding: 8px 16px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.btn-back-to-top {
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.btn-back-to-top:hover {
+  background-color: #2C4E80;
+}
+
+@media only screen and (min-width: 768px) {
+  .restaurant-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .toggle-btn {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+    margin-right: 5px;
+  }
+
+  .toggle-btn:hover {
+    transform: scale(0.9);
+    color: #c8da99;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  #drawer ul {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 11ch;
+    background-color: rgba(53, 71, 105, 0.8);
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1001;
+  }
+
+  #drawer ul li a:hover {
+    color: #c8da99;
+    font-weight: bold;
+  }
+
+  #drawer ul.show {
+    display: flex;
+  }
+
+  #drawer ul li {
+    margin: 0;
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
+
+@media only screen and (min-width: 1200px) {
+  .hero img {
+    min-width: 1000px;
+    width: 100%;
+  }
+
+  .restaurant-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

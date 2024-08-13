@@ -1,0 +1,371 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #f7f7f7;
+  line-height: 1.5;
+}
+
+header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  box-shadow: 0 4px 8px rgba(144, 207, 236, 0.1);
+  align-items: center;
+  background-image: radial-gradient(circle at 46.65% 40.79%, #3c5b83 0, #30394a 25%, #1b1a16 50%, #000000 75%, #000000 100%);
+  color: #fff;
+  padding: 15px;
+}
+
+header h1 {
+  margin: 0;
+  margin-left: 10px;
+  font-size: 22px;
+}
+
+header img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+#drawer {
+  justify-self: end;
+}
+
+#drawer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+}
+
+#drawer ul li {
+  margin-right: 10px;
+}
+
+#drawer ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px;
+  display: inline-block;
+}
+
+#drawer ul li a:hover {
+  color: #c8da99;
+}
+
+.toggle-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+main {
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.content h1 {
+  text-align: center;
+  font-weight: bold;
+  color: #2C4E80;
+}
+
+.content p {
+  padding: 10px;
+  text-align: center;
+  color: #30394a;
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.restaurant-detail-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px #2C4E80;
+  padding: 20px;
+  transition: transform 0.3s ease;
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+  position: relative;
+}
+
+.restaurant-detail-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px #2C4E80;
+}
+
+.restaurant-detail-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.restaurant-detail-card h2 {
+  position: absolute;
+  top: 45px;
+  left: 20px;
+  background-color: rgba(81, 87, 99, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.restaurant-detail-card h3 {
+  color: #1b1a16;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.restaurant-detail-card h4 {
+  color: #2C4E80;
+  font-weight: bold;
+}
+
+.restaurant-detail-card p {
+  text-align: justify;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.food-menu,
+.drink-menu {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.menu-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.menu-list {
+  list-style-type: disc;
+  padding: 0;
+  margin: 8px 25px;
+}
+
+.menu-list li {
+  margin-bottom: 12px;
+}
+
+.food-menu:hover,
+.drink-menu:hover {
+  transform: scale(1.01);
+  box-shadow: 0 5px 10px #2C4E80;
+}
+
+.restaurant-detail .reviews {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #ccc;
+  max-height: 150px;
+  overflow-y: auto;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.restaurant-detail .reviews h3 {
+  font-size: 18px;
+  margin-bottom: 3px;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  padding: 5px 0;
+  z-index: 1;
+}
+
+.restaurant-detail .review-item {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.restaurant-detail .review-item strong {
+  color: #2C4E80;
+}
+
+.review-form h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.review-form input[type="text"],
+.review-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  min-height: 44px;
+}
+
+.review-form button[type="submit"] {
+  background-color: #2C4E80;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 44px;
+  min-height: 44px;
+  margin: 10px auto;
+}
+
+.review-form button[type="submit"]:hover {
+  background-color: #1b1a16;
+}
+
+.review-form button[type="submit"]:active {
+  background-color: #0f0f0f;
+}
+
+.favorite-button {
+  display: inline-block;
+  padding: 10px;
+  min-width: 44px;
+  min-height: 44px;
+  color: #fff;
+  border: none;
+  background-color: #2C4E80;
+  border-radius: 7px;
+  margin: 10px auto;
+}
+
+.favorite-button:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  background-image: radial-gradient(circle at 46.65% 40.79%, #3c5b83 0, #30394a 25%, #1b1a16 50%, #000000 75%, #000000 100%);
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  border: 2px solid #626891;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999em;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  left: auto;
+  top: auto;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  padding: 8px 16px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.btn-back-to-top {
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.btn-back-to-top:hover {
+  background-color: #555;
+}
+
+@media only screen and (max-width: 768px) {
+  .toggle-btn {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+    margin-right: 5px;
+  }
+
+  .toggle-btn:hover {
+    transform: scale(0.9);
+    color: #c8da99;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  #drawer ul {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(53, 71, 105, 0.8);
+    position: absolute;
+    top: 11ch;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1001;
+  }
+
+  #drawer ul li a:hover {
+    color: #c8da99;
+    font-weight: bold;
+  }
+
+  #drawer ul.show {
+    display: flex;
+  }
+
+  #drawer ul li {
+    margin: 0;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+}
+
+.favorite-button {
+  margin: 10px;
+  margin-left: 38%;
+}
